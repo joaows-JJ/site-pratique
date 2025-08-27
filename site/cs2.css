@@ -1,0 +1,94 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f3f4f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background: #111827;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Menu de navegação */
+ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background: #1f2937;
+    padding: 1rem 0;
+}
+
+ul li {
+    margin: 0 20px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+ul li:hover {
+    color: #10b981;
+    /* verde esmeralda */
+}
+
+/* Conteúdo principal */
+#conteudo {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#conteudo h1 {
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+#conteudo p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Imagem */
+#conteudo img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+}
+
+/* Rodapé */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding: 1rem 0;
+    border-top: 1px solid #e5e7eb;
+    color: #6b7280;
+}
+
+footer a {
+    text-decoration: none;
+    color: #2563eb;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #1d4ed8;
+}

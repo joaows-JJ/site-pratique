@@ -1,0 +1,129 @@
+/* Reset básico */
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-image: url(images.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+
+    /* Centraliza conteúdo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Overlay escuro */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-in-out;
+    z-index: 9999;
+}
+
+.overlay.ativo {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* Texto neon de boas-vindas */
+.bem-vindo-text {
+    color: #FF4D4D;
+    font-size: clamp(2.5rem, 6vw, 6rem);
+    text-align: center;
+    text-shadow:
+        0 0 10px #FF4D4D,
+        0 0 20px #FF4D4D,
+        0 0 30px #FF4D4D,
+        0 0 40px #FF4D4D,
+        0 0 50px #FF4D4D,
+        0 0 60px #FF4D4D;
+    letter-spacing: 0.2em;
+    animation: led-glow 1.5s infinite alternate;
+    user-select: none;
+}
+
+@keyframes led-glow {
+    from {
+        text-shadow:
+            0 0 10px #FF4D4D,
+            0 0 20px #FF4D4D,
+            0 0 30px #FF4D4D,
+            0 0 40px #FF4D4D,
+            0 0 50px #FF4D4D,
+            0 0 60px #FF4D4D;
+    }
+
+    to {
+        text-shadow:
+            0 0 20px #FF4D4D,
+            0 0 40px #FF4D4D,
+            0 0 60px #FF4D4D,
+            0 0 80px #FF4D4D,
+            0 0 100px #FF4D4D,
+            0 0 120px #FF4D4D;
+    }
+}
+
+/* Caixa glass com borda neon animada */
+.Caixinha {
+    color: #fff;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border: 3px solid transparent;
+    border-image: linear-gradient(45deg, #ff0000, #00ffcc, #0000ff, #ff0000) 1;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 320px;
+    max-width: 90vw;
+    border-radius: 18px;
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.6);
+    animation: rgb-border 6s linear infinite;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    user-select: none;
+}
+
+.Caixinha:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.9);
+}
+
+/* Animação da borda */
+@keyframes rgb-border {
+    0% {
+        border-image: linear-gradient(45deg, #ff0000, #00ffcc, #0000ff, #ff0000) 1;
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    }
+
+    33% {
+        border-image: linear-gradient(45deg, #00ffcc, #0000ff, #ff0000, #00ffcc) 1;
+        box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+    }
+
+    66% {
+        border-image: linear-gradient(45deg, #0000ff, #ff0000, #00ffcc, #0000ff) 1;
+        box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+    }
+
+    100% {
+        border-image: linear-gradient(45deg, #ff0000, #00ffcc, #0000ff, #ff0000) 1;
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    }
+}
