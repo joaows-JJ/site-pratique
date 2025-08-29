@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Orbitron', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-image: url(images.jpg);
+    background-image: url(pngtree-rows-of-dumbbells-in-the-gym-image_15662386.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -80,12 +80,12 @@ body {
 
 /* Caixa glass com borda neon animada */
 .Caixinha {
-    color: #fff;
+    color: #050505;
     font-size: 1rem;
     background: rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(15px);
     border: 3px solid transparent;
-    border-image: linear-gradient(45deg, #ff0000, #00ffcc, #0000ff, #ff0000) 1;
+    border-image: linear-gradient(45deg, #fa6501f8, #f7fdfc, #f33d05, #110101) 1;
     padding: 30px 25px;
     display: flex;
     flex-direction: column;
@@ -108,7 +108,7 @@ body {
 /* Animação da borda */
 @keyframes rgb-border {
     0% {
-        border-image: linear-gradient(45deg, #ff0000, #00ffcc, #0000ff, #ff0000) 1;
+        border-image: linear-gradient(45deg, #fcad05, #00ffcc, #0000ff, #ff0000) 1;
         box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
     }
 
